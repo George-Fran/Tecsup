@@ -1,0 +1,724 @@
+{% extends 'backend/layout.html' %}
+{% load humanize %}
+{% load static %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up" data-aos-delay="200">
+          <h1>Tecnología Digital y Gestión</h1>
+          <h2>¡Domina la industria 4.0 con nosotros!</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started scrollto">Iniciar</a>
+            <a href="https://www.youtube.com/watch?v=bgK7AeP2lRs" class="glightbox btn-watch-video"><i
+                class="bi bi-play-circle"></i><span>Presentación</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Cliens Section ======= -->
+    <section id="cliens" class="cliens section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/grupo-hochschild.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/pacasmayo.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/cementos-selva.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/utec.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/tecsup.svg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/centro.png' %}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>PRESENTACIÓN</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              <strong>¡Bienvenidos a Tecnología Digital y Gestión!</strong>
+            </p>
+            <br>
+            <p style="text-align: justify">El departamento de tecnología digital y gestión es una comunidad cálida y
+              amigable, que alienta a los estudiantes a convertirse en profesionales globalmente competitivos, éticos e
+              innovadores que cuenten con un profundo conocimiento tecnológico.</p>
+
+            <p style="text-align: justify">Ofrecemos un currículo amplio y equilibrado, basado en los mejores estándares
+              peruanos e internacionales, y estamos orgullosos de ser el primer instituto tecnológico en Trujillo. A
+              través de nuestro plan de estudios dinámico basado en proyectos y nuestro sistema mejora contínua,
+              alentamos a nuestros estudiantes a desarrollar las cualidades de la pasión, la solidaridad, la
+              perseverancia y la mentalidad internacional.</p>
+
+            <p style="text-align: justify">Nuestros profesores guían a nuestros estudiantes para que se conviertan en
+              aprendices independientes, a través de un proceso de investigación y realización de proyectos reales, lo
+              que les permite alcanzar sus objetivos de aprendizaje.</p>
+
+            <br>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Innovación</li>
+              <li><i class="ri-check-double-line"></i> Trabajo colaborativo</li>
+              <li><i class="ri-check-double-line"></i> Calidad</li>
+            </ul>
+            <br>
+            <p style="text-align: justify"><strong>El Equipo.</strong></p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <img src="{% static 'img/tdg.jpg' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="about" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Equipo</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="{% static 'img/Anahí Arica.jpg' %}" class="img-fluid" alt="" height="250px"
+                  width="150px"></div>
+              <div class="member-info">
+                <h4>Anahí Arica Sánchez</h4>
+                <span>Docente</span>
+                <p>aarica@tecsup.edu.pe</p>
+                <div class="social">
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/anahi-bethsab%C3%A9-arica-s%C3%A1nchez-452bb790/" target="_blank"><i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="mailto:aarica@tecsup.edu.pe" target="_blank"><i class="ri-mail-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="{% static 'img/Zarela Gamboa.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Zarela Gamboa Sandoval</h4>
+                <span>Coordinadora</span>
+                <p>sgamboa@tecsup.edu.pe</p>
+                <div class="social">
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/susana-zarela-gamboa-sandoval-6a0b3b1a/"><i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="mailto:sgamboa@tecsup.edu.pe"><i class="ri-mail-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="{% static 'img/Omar Castañeda.jpg' %}" class="img-fluid" alt="" height="250px"
+                  width="150px"></div>
+              <div class="member-info">
+                <h4>Omar Castañeda</h4>
+                <span>Docente</span>
+                <p>ocastaneda@tecsup.edu.pe</p>
+                <div class="social">
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/omarcr/"><i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="mailto:ocastaneda@tecsup.edu.pe"><i class="ri-mail-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{% static 'img/Walter Moncada .png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter Moncada</h4>
+                <span>Docente</span>
+                <p>wmoncada@tecsup.edu.pe</p>
+                <div class="social">
+                  <div class="social">
+                    <a href=""><i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="mailto:wmoncada@tecsup.edu.pe"><i class="ri-mail-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{% static 'img/Leonardo Silva.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Leonardo Silva</h4>
+                <span>Docente</span>
+                <p>asilva@tecsup.edu.pe</p>
+                <div class="social">
+                  <div class="social">
+                    <a href=""><i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="mailto:asilva@tecsup.edu.pe"><i class="ri-mail-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{% static 'img/Alejandro Ruiz.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Alejandro Ruiz</h4>
+                <span>Ingeniero Industrial</span>
+                <p>Docente tiempo completo encargado de planta piloto</p>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/alejandro-manuel-ruiz-lavado-3bb95b48/"><i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="mailto:aruiz@tecsup.edu.pe"><i class="ri-mail-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+    <!-- ======= Inicio Noticias ======= -->
+    <section style="background-color: #fff;" id="noticias" class="services section-bg">
+
+      
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Noticias</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          {% for noticia in noticias %}
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <img src="{{ noticia.image.url }}" class="img-fluid" alt="">
+              <time class="badge" datetime="2023-02-01">{{ noticia.carrera.abreviatura }}</time>
+              <h4>{{ noticia.titulo }}</h4>
+              <div class="dateplace">
+                <p><i class="bx bx-map"></i> {{ noticia.sede }}</p>
+                <p class="calendario"><i class="bx bx-calendar"></i> {{ noticia.timestamp|naturalday }}</p>
+              </div>
+              <p>{{ noticia.resumen }}</p>
+              <div class="ummm">
+                <a href="noticia/{{ noticia.id_noticia }}" target="_blank" class="buy-btnm">Ler más</a>
+              </div>
+
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+        <div class="btn-item">
+          <a href="{% url 'noticias' %}" class="btn-ghost-notice blue secundary round" target="_blank">Ver Todos</a>
+        </div>
+      </div>
+    </section>
+    <!--FIN APARTADO Noticias-->
+
+    <!--Estadisticas-->
+    <div class="counter-wrapper">
+      <div class="counter">
+        <h1 class="count" data-target="1254">0</h1>
+        <p>Alumnos</p>
+      </div>
+      <div class="counter">
+        <h1 class="count" data-target="12168">0</h1>
+        <p>Proyectos 2022-2</p>
+      </div>
+      <div class="counter">
+        <h1 class="count" data-target="2172">0</h1>
+        <p>Promociones</p>
+      </div>
+      <div class="counter">
+        <h1 class="count" data-target="732">0</h1>
+        <p>Profesores</p>
+      </div>
+    </div>
+    <!--FIN APARTADO ESTADISTICAS-->
+
+    <!--INICIO APARTADO EVENTOS-->
+    <!-- ======= Services Section ======= -->
+    <section id="eventos" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Eventos</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          {% for evento in eventos %}
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+            data-aos-delay="400">
+            <div class="icon-box">
+              <img src="{{ evento.image.url }}" class="img-fluid" alt="">
+              <time class="badge" datetime="2023-02-01">{{ evento.fecha }}</time>
+              <h4>{{ evento.titulo }}</h4>
+              <p><i class="bx bx-map"></i> {{ evento.lugar }}</p>
+              <p>{{ evento.descripcion }}</p>
+              <div class="ummm">
+                <a href="{{ evento.link }}" target="_blank" class="buy-btnm">Ingresar</a>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+        <div class="btn-item">
+          <a href="{% url 'eventos' %}" class="btn-ghost blue secundary round" target="_blank">Ver Todos</a>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+    <!--FIN APARTADO EVENTOS-->
+
+    <!--INICIO APARTADO Carrera-->
+    <!--Tecnología de la Producción-->
+    <section id="carrera">
+      <div class="title" style="font-size: 30px;
+      color: black;
+      text-align: center;">Tecnología de la Producción</div>
+      <div class="accordion">
+        <div class="image-box-tecnologia">
+          <img src="{% static 'img/tecnologia6.jpg' %}" alt="Accordion Image" height="300px">
+        </div>
+        <div class="accordion-text">
+          <ul class="faq-text">
+            <li>
+              <div class="question-arrow">
+                <span class="question">Sobre Nosotros</span>
+                <i class="bx bxs-chevron-up arrow"></i>
+              </div>
+              <p style="text-align: justify;">Son reconocidos por su labor profesional en empresas industriales y de
+                servicios, supervisando, implementando, desarrollando y mejorando procesos productivos.
+
+                Desarrollan soluciones utilizando tecnologías modernas y gestionando los recursos con eficiencia;
+                trabajan en equipo comunicándose de manera efectiva.</p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">Perfil del Egresado</span>
+                <i class="bx bxs-chevron-up arrow"></i>
+              </div>
+              <p style="text-align: justify;">El profesional de esta especialidad gestiona y optimiza las actividades de
+                producción en plantas industriales, y aplica acciones para elevar la productividad y eficiencia,
+                cumpliendo con los requerimientos de la tecnología y gestión de la producción.
+
+                Trabaja en equipo y se comunica de manera eficaz para dar solución a problemas industriales.</p>
+              <span class="line"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--FIN TECNOLOGÍA DE LA PRODUCCIÓN-->
+
+    <!--DISEÑO Y DESARROLLO DE SOFTWARE-->
+    <section id="carrera" style="background-color: #f3f5fa;">
+      <div class="title" style="font-size: 30px;
+      color: black;
+      text-align: center;">Diseño y Desarrollo de Software</div>
+      <div class="accordion">
+        <div class="image-box-tecnologia">
+          <img src="{% static 'img/software_presentacion.jpg' %}" alt="Accordion Image">
+        </div>
+        <div class="accordion-text">
+          <ul class="faq-text">
+            <li>
+              <div class="question-arrow">
+                <span class="question">Sobre Nosotros</span>
+                <i class="bx bxs-chevron-up arrow"></i>
+              </div>
+              <p style="text-align: justify;">Se desempeñan exitosamente en empresas comerciales, industriales y de
+                servicios, destacando por su
+                dominio en las tecnologías para el diseño y desarrollo de soluciones de software.
+
+                Desarrollan soluciones utilizando tecnologías modernas y gestionando los recursos con eficiencia;
+                trabajan
+                en equipo comunicándose de manera efectiva.</p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">Perfil del Egresado</span>
+                <i class="bx bxs-chevron-up arrow"></i>
+              </div>
+              <p style="text-align: justify;">El profesional de esta especialidad se desempeñan exitosamente en empresas
+                comerciales, industriales y
+                de
+                servicios, destacando por su dominio en las tecnologías para el diseño y desarrollo de soluciones de
+                software.
+
+                Desarrollan soluciones utilizando tecnologías modernas y gestionando los recursos con eficiencia,
+                trabajando en equipo y comunicándose de manera efectiva.</p>
+              <span class="line"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--FIN DISEÑO Y DESARROLLO DE SOFTWARE-->
+    <!--FIN APARTADO CARRERA-->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Proyectos</h2>
+        </div>
+
+        <!--<ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">Todos</li>
+          <li data-filter=".filter-app">Tecnología de la Producción</li>
+          <li data-filter=".filter-card">Diseño y Desarrollo de Software</li>
+        </ul>-->
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+
+          {% for proyecto in proyectos %}
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="{{ proyecto.image.url }}" class="img-fluid" alt="">
+            </div>
+            <div class="portfolio-info">
+              <h4>{{ proyecto.titulo }}</h4>
+              {% if proyecto.carrera == 1 %}
+              <p>Diseño y Desarrollo de Software</p>
+              {% elif proyecto.carrera == 2 %}
+              <p>Tecnología de la Producción</p>
+              {% endif %}
+              <a href="{{ proyecto.image.url }}" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="{{ proyecto.titulo }}"><i class="bx bx-plus"></i></a>
+              <a href="proyecto/{{ proyecto.id_proyecto }}" class="details-link" title="Mas detalles"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          {% endfor %}
+
+
+        </div>
+        <div class="btn-item">
+          <a href="{% url 'proyectos' %}" class="btn-ghost blue secundary round">Ver Todos</a>
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                data-bs-target="#faq-list-1">Por qué elegir la carrera de Tecnología de la Producción? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p style="text-align: justify;">
+                  La carrera Tecnología de la Producción cuenta con un plan de estudios diseñado para satisfacer
+                  necesidades del sector
+                  productivo mediante la aplicación de tecnologías modernas para la solución de problemas. Durante la
+                  formación técnica
+                  se desarrollan prácticas en equipados laboratorios y talleres, así como nuestra planta piloto
+                  agroindustrial, las que
+                  permiten el desarrollo de habilidades personales y profesionales, indispensables en el mundo actual.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+                class="collapsed">Por qué elegir la carrera de Diseño y Desarrollo de Aplicaciones? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p style="text-align: justify;">
+                  El especialista en Diseño y Desarrollo de Software obtiene competencias tecnológicas, administrativas
+                  y personales
+                  para desarrollar aplicaciones, crear programas y sistemas computacionales para cualquier tipo de
+                  empresa. También
+                  adquiere capacidades analíticas, constructivas y creativas para llevar a cabo proyectos de software,
+                  orientados a la
+                  resolución de problemas, y con habilidades para lograr la integración de sistemas.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+                class="collapsed">Por qué elegir Tecsup? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p style="text-align: justify;">
+                  Ofrecemos una propuesta académica de alto valor ya que fomentamos que las carreras esten acreditadas
+                  Internacionalmente y con visión global al desarrollar programas de Intercambios estudiantiles con
+                  universidades de
+                  América Latina, EE.UU. y Europa.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <div class="courses-container"></div>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contacto" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contacto</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Dirección:</h4>
+                <p>VX25+MMJ, Trujillo 13009</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Correo:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Teléfono:</h4>
+                <p>(044) 485420</p>
+              </div>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.539459419722!2d-79.04303448566954!3d-8.148275483865163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d47e1fef7f9%3A0xc69536bb4839b47b!2sInstituto%20Superior%20Tecsup!5e0!3m2!1ses!2spe!4v1674616552100!5m2!1ses!2spe"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="420px" height="250px"></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Apellido</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Correo</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Mensaje</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <!--<div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Tecnología Digital y Gestión</h3>
+            <p>
+              Tecsup <br>
+              VX25+MMJ, Trujillo 13009<br>
+              Trujillo,Perú <br><br>
+              <strong>Teléfono:</strong> (044) 485420<br>
+              <strong>Correo:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Noticias</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Eventos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Carrera</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Convenios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cementos Selva</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Certiport</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pacasmayo</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Utec</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tecsup</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Redes Sociales</h4>
+            <div class="social-links mt-3">
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Tecnología Digital y Gestión</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Desarrollado por <a href="https://bootstrapmade.com/">Tecsup-C24/4 CICLO</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", (e) => {
+        let clickedLi;
+        if (e.target.classList.contains("question-arrow")) {
+          clickedLi = e.target.parentElement;
+        } else {
+          clickedLi = e.target.parentElement.parentElement;
+        }
+        clickedLi.classList.toggle("showAnswer");
+      });
+    }
+  </script>
+
+
+
+{% endblock content %}

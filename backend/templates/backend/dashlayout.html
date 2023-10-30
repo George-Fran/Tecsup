@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Administrador</title>
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon_0.ico' %}" rel="icon" />
+    <link
+      href="{% static 'img/apple-touch-icon.png' %}"
+      rel="apple-touch-icon"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/dashboard.css ' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-data icon"></i>
+        <div class="logo_name">TecsupAdmin</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="{% url 'dashboard' %}">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Inicio</span>
+          </a>
+          <span class="tooltip">Inicio</span>
+        </li>
+        <li>
+          <a href="{% url 'noticiasdashboard' %}">
+            <i class="bx bx-news"></i>
+            <span class="links_name">Noticias</span>
+          </a>
+          <span class="tooltip">Noticias</span>
+        </li>
+        <li>
+          <a href="{% url 'eventosdashboard' %}">
+            <i class="bx bx-calendar-event"></i>
+            <span class="links_name">Eventos</span>
+          </a>
+          <span class="tooltip">Eventos</span>
+        </li>
+        <li>
+          <a href="{% url 'proyectosdashboard' %}">
+            <i class="bx bx-sort-a-z"></i>
+            <span class="links_name">Proyectos</span>
+          </a>
+          <span class="tooltip">Proyectos</span>
+        </li>
+        <li>
+          <a href="{% url 'carreras' %}">
+            <i class="bx bx-save"></i>
+            <span class="links_name">Carreras</span>
+          </a>
+          <span class="tooltip">Carreras</span>
+        </li>
+        <li>
+          <a href="{% url 'periodos' %}">
+            <i class="bx bxs-parking"></i>
+            <span class="links_name">Periodos</span>
+          </a>
+          <span class="tooltip">Periodos</span>
+        </li>
+        <li>
+          <a href="http://127.0.0.1:8000/admin">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Ajustes</span>
+          </a>
+          <span class="tooltip">Ajustes</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img
+              src="https://i.pinimg.com/736x/54/1a/67/541a675ea42aa8ee01f3557f07b00c84.jpg"
+              alt="profileImg"
+            />
+            <div class="name_job">
+              <div class="name">{{ request.user.username }}</div>
+              <div class="job">Web Dev</div>
+            </div>
+          </div>
+          <a href="{% url 'logout' %}"
+            ><i class="bx bx-log-out" id="log_out"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+
+      searchBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+        }
+      }
+    </script>
+
+    {% block content %} {% endblock content %}
+  </body>
+</html>

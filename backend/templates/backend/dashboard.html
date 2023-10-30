@@ -1,0 +1,122 @@
+{% extends 'backend/dashlayout.html' %}
+{% block content %} 
+{% load static %}
+
+<!--Dashboard-->
+
+<section class="dashboard">
+  <div class="top">
+    <div class="search-box">
+      <i class="uil uil-search"></i>
+      <input type="text" placeholder="Search here..." />
+    </div>
+
+    <img
+      src="https://i.pinimg.com/736x/54/1a/67/541a675ea42aa8ee01f3557f07b00c84.jpg"
+      alt=""
+    />
+  </div>
+
+  <div class="dash-content">
+    <div class="overview">
+      <div class="title">
+        <i class="uil uil-tachometer-fast-alt"></i>
+        <span class="text">Dashboard</span>
+      </div>
+
+      <div class="boxes">
+          <div class="box box1">
+            <a href="{% url 'agregarnoticia' %}"><i class="uil uil-newspaper"></i></a>
+            <span class="text">Noticias</span>
+            <span class="number">5</span>
+          </div>
+          <div class="box box2">
+            <a href="{% url 'agregarevento' %}"><i class="uil uil-stopwatch"></i></a>
+            <span class="text">Eventos</span>
+            <span class="number">4</span>
+          </div>
+          <div class="box box3">
+            <a href="{% url 'agregarproyecto' %}"><i class="uil uil-folder-open"></i></a>
+            <span class="text">Proyectos</span>
+            <span class="number">0</span>         
+          </div>
+      </div>
+    </div>
+
+    <div class="activity">
+      <div class="title">
+        <i class="uil uil-clock-three"></i>
+        <span class="text">Noticias recientes</span>
+      </div>
+
+      <div class="activity-data">
+        <div class="data names">
+          <span class="data-title"><strong>Titulo</strong></span>
+          {% for noticia in noticias %}
+          <span class="data-list">{{ noticia.titulo }}</span>
+          {% endfor %}
+        </div>
+        <div class="data email">
+          <span class="data-title"><strong>Resumen</strong></span>
+          {% for noticia in noticias %}
+          <span class="data-list">{{ noticia.resumen }}</span>
+          {% endfor %}
+        </div>
+        <div class="data joined">
+          <span class="data-title"><strong>Fecha</strong></span>
+          {% for noticia in noticias %}
+          <span class="data-list">{{ noticia.timestamp }}</span>
+          {% endfor %}
+        </div>
+        <div class="data type">
+          <span class="data-title"><strong>Carrera</strong></span>
+          {% for noticia in noticias %}
+          <span class="data-list">{{ noticia.carrera }}</span>
+          {% endfor %}
+        </div>
+        <div class="data status">
+          <span class="data-title"><strong>Sede</strong></span>
+          {% for noticia in noticias %}
+          <span class="data-list">{{ noticia.sede }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="activity">
+      <div class="title">
+        <i class="uil uil-clock-three"></i>
+        <span class="text">Eventos recientes</span>
+      </div>
+
+      <div class="activity-data">
+        <div class="data names">
+          <span class="data-title"><strong>Titulo</strong></span>
+          {% for evento in eventos %}
+          <span class="data-list">{{ evento.titulo }}</span>
+          {% endfor %}
+        </div>
+        <div class="data email">
+          <span class="data-title"><strong>Lugar</strong></span>
+          {% for evento in eventos %}
+          <span class="data-list">{{ evento.lugar }}</span>
+          {% endfor %}
+        </div>
+        <div class="data joined">
+          <span class="data-title"><strong>Fecha</strong></span>
+          {% for evento in eventos %}
+          <span class="data-list">{{ evento.fecha }}</span>
+          {% endfor %}
+        </div>
+        <div class="data type">
+          <span class="data-title"><strong>Link</strong></span>
+          {% for evento in eventos %}
+          <span class="data-list">{{ evento.link }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

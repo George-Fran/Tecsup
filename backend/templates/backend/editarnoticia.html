@@ -1,0 +1,246 @@
+{% extends 'backend/dashlayout.html' %} {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Noticia</title>
+  </head>
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .input-bx {
+      position: relative;
+      width: 300px;
+    }
+    .input-bx input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #7f8fa6;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.6s;
+    }
+
+    .input-bx span {
+      position: absolute;
+      left: 0;
+      padding: 10px;
+      font-size: 1rem;
+      color: #7f8fa6;
+      text-transform: uppercase;
+      pointer-events: none;
+      transition: 0.6s;
+    }
+    .input-bx input:valid ~ span,
+    .input-bx input:focus ~ span {
+      color: #38AAEB;
+      transform: translateX(10px) translateY(-7px);
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0 10px;
+      background: #fff;
+      letter-spacing: 0.1rem;
+    }
+
+    .input-bx input:valid,
+    .input-bx input:focus {
+      color: #464747;
+      border: 2px solid #38AAEB;
+    }
+
+    .input-bx textarea:valid ~ span,
+    .input-bx textarea:focus ~ span {
+      color: #38AAEB;
+      transform: translateX(10px) translateY(-7px);
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0 10px;
+      background: #fff;
+      letter-spacing: 0.1rem;
+    }
+    .input-bx textarea:valid,
+    .input-bx textarea:focus {
+      color: #464747;
+      border: 2px solid #38AAEB;
+    }
+
+    textarea {
+      width: 100%;
+      resize: none;
+      height: 59px;
+      padding: 10px;
+      border: 2px solid #7f8fa6;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.6s;
+    }
+    textarea::-webkit-scrollbar {
+      width: 0px;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #27adfa, #38aaeb, #44afee);
+        background-size: 200%;
+        font-size: 1.2rem;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    .btn:hover {
+      background-color: aliceblue;
+      border: 2px solid #38AAEB;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #7f8fa6;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.6s;
+    }
+    .input-bx select:valid ~ span,
+    .input-bx select ~ span {
+      color: #38aaeb;
+      transform: translateX(10px) translateY(-7px);
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0 10px;
+      background: #fff;
+      letter-spacing: 0.1rem;
+    }
+
+    .input-bx select:valid,
+    .input-bx select:focus {
+      color: #464747;
+      border: 2px solid #38aaeb;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .container .card {
+      width: 320px;
+      height: 400px;
+      overflow: hidden;
+      text-align: center;
+      transition: all 0.25s;
+    }
+  </style>
+  <body>
+    <h3>Editar noticia</h3>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="container">
+        <div class="card">
+          <br>
+      <div class="input-bx">
+        {{ form.titulo }}
+        <span>Titulo</span>
+      </div>
+      <br />
+
+      <div class="input-bx">
+        {{ form.resumen }}
+        <span>Resumen</span>
+      </div>
+      <br />
+
+      <div class="input-bx">
+        {{ form.contenido }}
+        <span>Contenido</span>
+      </div>
+
+      <br />
+
+      <div class="input-bx">
+        {{ form.carrera }}
+        <span>Carrera</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <br>
+      <div class="input-bx">
+        {{ form.sede }}
+        <span>Sede</span>
+      </div>
+
+      <br />
+
+      <div class="input-bx">
+        {{ form.image }}
+        <span>Imagen1</span>
+      </div>
+
+      <div class="input-bx">
+        {{ form.image2 }}
+        <span>Imagen2</span>
+      </div>
+
+      <div class="input-bx">
+        {{ form.image3 }}
+        <span>Imagen3</span>
+      </div>
+    </div>
+
+      
+      {% if form.errors %}
+      <p style="color: red">Sucedio un error vuelve a ingresar los datos.</p>
+      {% endif %}
+
+
+      <button class="btn">Ingresar Datos</button>
+    </div>
+    </form>
+
+    <!--Script-->
+
+    <script>
+      const textarea = document.querySelector("textarea");
+      textarea.addEventListener("keyup", (e) => {
+        textarea.style.height = "63px";
+        let scHeight = e.target.scrollHeight;
+        textarea.style.height = `${scHeight}px`;
+      });
+    </script>
+  </body>
+</html>
+{% endblock content %}

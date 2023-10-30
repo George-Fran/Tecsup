@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>TDG - Tecnología Digital y Gestión</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon_0.ico' %}" rel="icon" />
+    <link
+      href="{% static 'img/apple-touch-icon.png' %}"
+      rel="apple-touch-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/boxicons/css/boxicons.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/remixicon/remixicon.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+    crossorigin="anonymous"
+  />
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Arsha - v4.3.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+      <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto"><a href="{% url 'home' %}">TDG | Tecsup</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+          <div class="openMenu"><i class="fa fa-bars"></i></div>
+          <ul class="mainMenu">
+            <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+            <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+            <li><a class="nav-link scrollto" href="#noticias">Noticias</a></li>
+            <li><a class="nav-link scrollto" href="#eventos">Eventos</a></li>
+            <li><a class="nav-link scrollto" href="#carrera">Carreras</a></li>
+            <li><a class="nav-link scrollto" href="#contacto">Contacto</a></li>
+            <li><a class="nav-link scrollto" href="#"></a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Aplicaciones</span> <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul>
+                <li><a href="#">Administrar</a></li>
+                <li><a href="#">Activos</a></li>
+                <li><a href="#">Constancias</a></li>
+                <li><a href="#">Descriptores</a></li>
+              </ul>
+            </li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+          </ul>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+          <div class="container">
+    
+            <ol>
+              <li><a href="index.html">Inicio</a></li>
+              <li>Detalles del Proyecto</li>
+            </ol>
+          </div>
+        </section><!-- End Breadcrumbs -->
+    
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+          <div class="container">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper-container">
+                  <div class="swiper-wrapper align-items-center">
+    
+                    <div class="swiper-slide">
+                      <img src="{{ proyecto.image.url }}" alt="" height="600px">
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <img src="{{ proyecto.image2.url }}" alt="" height="600px">
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <img src="{{ proyecto.image3.url }}" alt="" height="600px">
+                    </div>
+    
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4">
+                <div class="portfolio-info">
+                  <h3>Detalles del Proyecto</h3>
+                  <ul>
+                    <li><strong>Titulo</strong>: {{ proyecto.titulo }}</li>
+                    <li><strong>Integrantes</strong>: {{ proyecto.integrantes }}</li>
+                    <li><strong>Asesor</strong>: {{ proyecto.asesor }}</li>
+                    <li><strong>Carrera</strong>: {{ proyecto.carrera }}</li>
+                    <li><strong>Ciclo</strong>: {{ proyecto.ciclo }}</li>
+                    <li><strong>Periodo</strong>: {{ proyecto.periodo }}</li>
+                    <li><strong>Project URL</strong>: <a
+                        href="{{ proyecto.url }}" target="_blank">{{ proyecto.url }}</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="portfolio-description">
+                  <h2>Resumen</h2>
+                  <p style="text-align: justify;">
+                    {{ proyecto.resumen }}
+                  </p>
+                </div>
+              </div>
+    
+            </div>
+    
+          </div>
+        </section><!-- End Portfolio Details Section -->
+    
+      </main><!-- End #main -->
+    
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="footer-top" style="background-color: #f3f5fa;">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>Tecnología Digital y Gestión</h3>
+                <p>
+                  Tecsup <br>
+                  VX25+MMJ, Trujillo 13009<br>
+                  Trujillo,Perú <br><br>
+                  <strong>Teléfono:</strong> (044) 485420<br>
+                  <strong>Correo:</strong> info@example.com<br>
+                </p>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Noticias</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Eventos</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Carrera</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Convenios</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Cementos Selva</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Certiport</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Pacasmayo</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Utec</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Tecsup</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Redes Sociales</h4>
+                <div class="social-links mt-3">
+                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="container footer-bottom clearfix">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Tecnología Digital y Gestión</span></strong>
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+            Desarrollado por <a href="https://bootstrapmade.com/">Tecsup-C24/4 CICLO</a>
+          </div>
+    
+        </div>
+      </footer><!-- End Footer -->
+    
+      <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+          class="bi bi-arrow-up-short"></i></a>
+    
+      <!-- Vendor JS Files -->
+      <script src="{% static 'vendor/aos/aos.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+      <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+      <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+      <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="{% static 'js/main.js' %}"></script>
+      <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
+

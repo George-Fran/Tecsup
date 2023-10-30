@@ -1,0 +1,88 @@
+{% extends 'backend/dashlayout.html' %}
+{% block content %}
+{% load static %}
+
+<!--Dashboard-->
+
+<section class="dashboard">
+  <form method="GET">
+    <div class="top">
+      <div class="search-box">
+        <button style="cursor: pointer;" type="submit">
+          <i class="uil uil-search"></i>
+        </button>
+        <input type="text" placeholder="Buscar..." name="buscar" value="{{ request.GET.buscar }}" />
+      </div>
+      <img
+        src="https://i.pinimg.com/736x/54/1a/67/541a675ea42aa8ee01f3557f07b00c84.jpg"
+        alt=""
+      />
+    </div>
+  </form>
+
+  <div class="dash-content">
+
+    <div class="activity">
+      <div class="title">
+        <i class="uil uil-clock-three"></i>
+        <span class="text">Proyectos</span>
+      </div>
+
+      <div class="activity-data">
+        <div class="data names">
+          <span class="data-title"><strong>Titulo</strong></span>
+          {% for proyecto in proyectos %}
+          <span class="data-list">{{ proyecto.titulo }}</span>
+          {% endfor %}
+        </div>
+        <div class="data names">
+          <span class="data-title"><strong>Carrera</strong></span>
+          {% for proyecto in proyectos %}
+          <span class="data-list">{{ proyecto.carrera }}</span>
+          {% endfor %}
+        </div>
+        <div class="data names">
+          <span class="data-title"><strong>Periodo</strong></span>
+          {% for proyecto in proyectos %}
+          <span class="data-list">{{ proyecto.periodo }}</span>
+          {% endfor %}
+        </div>
+        <div class="data names">
+          <span class="data-title"><strong>Ciclo</strong></span>
+          {% for proyecto in proyectos %}
+          <span class="data-list">{{ proyecto.ciclo }}</span>
+          {% endfor %}
+        </div>
+        <div class="data joined">
+          <span class="data-title"><strong>Asesor</strong></span>
+          {% for proyecto in proyectos %}
+          <span class="data-list">{{ proyecto.asesor }}</span>
+          {% endfor %}
+        </div>
+        <div class="data status">
+          <span class="data-title"><strong>Acciones</strong></span>
+          {% for proyecto in proyectos %}
+          <span class="data-list"><a href="{% url 'editarproyecto' proyecto.id_proyecto %}">Editar</a> <a style="background-color: #ff0000; color: rgb(255, 255, 255);" href="{% url 'eliminarproyecto' proyecto.id_proyecto %}">Eliminar</a></span>
+          {% endfor %}
+        </div>
+        <div
+        class="data status">
+        <div class="boton-modal">
+          <a style="
+          background-color: #63af4c;
+          border-radius: 5px;
+          padding: 5px 14px;
+          text-align: center;
+          text-decoration: none;
+          color: black;
+          display: inline-block;
+          font-size: 16px;
+        " href="{% url 'agregarproyecto' %}">Agregar Proyecto</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

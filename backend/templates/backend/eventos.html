@@ -1,0 +1,265 @@
+{% extends 'backend/layout.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h1>Tecnología Digital y Gestión</h1>
+            <h2>¡Domina la industria 4.0 con nosotros!</h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a href="#about" class="btn-get-started scrollto">Iniciar</a>
+              <a
+                href="https://www.youtube.com/watch?v=bgK7AeP2lRs"
+                class="glightbox btn-watch-video"
+                ><i class="bi bi-play-circle"></i><span>Presentación</span></a
+              >
+            </div>
+          </div>
+          <div
+            class="col-lg-6 order-1 order-lg-2 hero-img"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="{% static 'img/hero-img.png' %}"
+              class="img-fluid animated"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Inicio Noticias ======= -->
+        <section style="background-color: #fff;" id="noticias" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Eventos</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                        sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                        Quia fugiat sit
+                        in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row">
+                    {% for evento in eventos %}
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                      data-aos-delay="400">
+                      <div class="icon-box">
+                        <img src="{{ evento.image.url }}" class="img-fluid" alt="">
+                        <time class="badge" datetime="2023-02-01">{{ evento.fecha }}</time>
+                        <h4>{{ evento.titulo }}</h4>
+                        <p><i class="bx bx-map"></i> {{ evento.lugar }}</p>
+                        <p>{{ evento.descripcion }}</p>
+                        <div class="ummm">
+                          <a href="{{ evento.link }}" target="_blank" class="buy-btnm">Ingresar</a>
+                        </div>
+                      </div>
+                    </div>
+          
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!--FIN APARTADO Noticias-->
+
+
+        <div class="courses-container"></div>
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contacto" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contacto</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-5 d-flex align-items-stretch">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Dirección:</h4>
+                                <p>VX25+MMJ, Trujillo 13009</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Correo:</h4>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Teléfono:</h4>
+                                <p>(044) 485420</p>
+                            </div>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.539459419722!2d-79.04303448566954!3d-8.148275483865163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d47e1fef7f9%3A0xc69536bb4839b47b!2sInstituto%20Superior%20Tecsup!5e0!3m2!1ses!2spe!4v1674616552100!5m2!1ses!2spe"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" width="420px" height="250px"></iframe>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" name="name" class="form-control" id="name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="name">Apellido</label>
+                                    <input type="email" class="form-control" name="email" id="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Correo</label>
+                                <input type="text" class="form-control" name="subject" id="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Mensaje</label>
+                                <textarea class="form-control" name="message" rows="10" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Enviar</button></div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <!--<div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+        <div class="footer-top" style="background-color: #f3f5fa;">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Tecnología Digital y Gestión</h3>
+                        <p>
+                            Tecsup <br>
+                            VX25+MMJ, Trujillo 13009<br>
+                            Trujillo,Perú <br><br>
+                            <strong>Teléfono:</strong> (044) 485420<br>
+                            <strong>Correo:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Enlaces</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Noticias</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Eventos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Carrera</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Convenios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Cementos Selva</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Certiport</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Pacasmayo</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Utec</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Tecsup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Redes Sociales</h4>
+                        <div class="social-links mt-3">
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Tecnología Digital y Gestión</span></strong>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+                Desarrollado por <a href="https://bootstrapmade.com/">Tecsup-C24/4 CICLO</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+{% endblock content %}
