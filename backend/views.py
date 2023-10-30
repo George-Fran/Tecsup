@@ -7,14 +7,14 @@ from django.contrib.auth.decorators import login_required
 
 
 def home(request):
-	noticias = Noticia.objects.raw('SELECT * FROM `backend_noticia` ORDER  BY id_noticia DESC LIMIT  4;')
-	eventos = Evento.objects.raw('SELECT * FROM `backend_evento` ORDER  BY id_evento DESC LIMIT 4;')
-	proyectos = Proyecto.objects.raw('SELECT * FROM `backend_proyecto` ORDER  BY id_proyecto DESC LIMIT 3;')
+	noticias = Noticia.objects.raw('SELECT * FROM backend_noticia ORDER  BY id_noticia DESC LIMIT  4;')
+	eventos = Evento.objects.raw('SELECT * FROM backend_evento ORDER  BY id_evento DESC LIMIT 4;')
+	proyectos = Proyecto.objects.raw('SELECT * FROM backend_proyecto ORDER  BY id_proyecto DESC LIMIT 3;')
 	context = {'noticias':noticias, 'eventos':eventos, 'proyectos':proyectos}
 	return render(request, 'backend/index.html', context)
 
 def noticias(request):
-	noticias = Noticia.objects.raw('SELECT * FROM `backend_noticia` ORDER  BY id_noticia DESC')
+	noticias = Noticia.objects.raw('SELECT * FROM backend_noticia ORDER  BY id_noticia DESC')
 	context = {'noticias':noticias}
 	return render(request, 'backend/noticias.html', context)
 
@@ -24,12 +24,12 @@ def noticia(request, id):
 	return render(request, 'backend/noticia.html', context)
 
 def eventos(request):
-	eventos = Evento.objects.raw('SELECT * FROM `backend_evento` ORDER  BY id_evento DESC')
+	eventos = Evento.objects.raw('SELECT * FROM backend_evento ORDER  BY id_evento DESC')
 	context = {'eventos':eventos}
 	return render(request, 'backend/eventos.html', context)
 
 def proyectos(request):
-	proyectos = Proyecto.objects.raw('SELECT * FROM `backend_proyecto` ORDER  BY id_proyecto DESC')
+	proyectos = Proyecto.objects.raw('SELECT * FROM backend_proyecto ORDER  BY id_proyecto DESC')
 	context = {'proyectos':proyectos}
 	return render(request, 'backend/proyectos.html', context)
 
@@ -40,8 +40,8 @@ def proyecto(request, id):
 
 @login_required
 def dashboard(request):
-	noticias = Noticia.objects.raw('SELECT * FROM `backend_noticia` ORDER  BY id_noticia DESC LIMIT 2;')
-	eventos = Evento.objects.raw('SELECT * FROM `backend_evento` ORDER  BY id_evento DESC LIMIT 2;')
+	noticias = Noticia.objects.raw('SELECT * FROM backend_noticia ORDER  BY id_noticia DESC LIMIT 2;')
+	eventos = Evento.objects.raw('SELECT * FROM backend_evento ORDER  BY id_evento DESC LIMIT 2;')
 	context = {'noticias':noticias, 'eventos':eventos}
 	return render(request, 'backend/dashboard.html', context)
 
@@ -101,7 +101,7 @@ def agregarproyecto(request):
 @login_required
 def noticiasdashboard(request):
 	busqueda = request.GET.get('buscar')
-	noticias = Noticia.objects.raw('SELECT * FROM `backend_noticia` ORDER  BY id_noticia DESC')
+	noticias = Noticia.objects.raw('SELECT * FROM backend_noticia ORDER  BY id_noticia DESC')
 	
 	if busqueda:
 		noticias = Noticia.objects.filter(
@@ -132,7 +132,7 @@ def editarnoticia(request, id):
 @login_required
 def eventosdashboard(request):
 	busqueda = request.GET.get('buscar')
-	eventos = Evento.objects.raw('SELECT * FROM `backend_evento` ORDER  BY id_evento DESC')
+	eventos = Evento.objects.raw('SELECT * FROM backend_evento ORDER  BY id_evento DESC')
 
 	if busqueda:
 		eventos = Evento.objects.filter(
@@ -163,7 +163,7 @@ def editarevento(request, id):
 @login_required
 def proyectosdashboard(request):
 	busqueda = request.GET.get('buscar')
-	proyectos = Proyecto.objects.raw('SELECT * FROM `backend_proyecto` ORDER  BY id_proyecto DESC')
+	proyectos = Proyecto.objects.raw('SELECT * FROM backend_proyecto ORDER  BY id_proyecto DESC')
 
 	if busqueda:
 		proyectos = Proyecto.objects.filter(
@@ -197,7 +197,7 @@ def editarproyecto(request, id):
 @login_required
 def carreras(request):
 	busqueda = request.GET.get('buscar')
-	carreras = Carrera.objects.raw('SELECT * FROM `backend_carrera` ORDER  BY id_carrera DESC')
+	carreras = Carrera.objects.raw('SELECT * FROM backend_carrera ORDER  BY id_carrera DESC')
 
 	if busqueda:
 		carreras = Carrera.objects.filter(
@@ -222,7 +222,7 @@ def eliminarcarrera(request, id):
 
 def periodos(request):
 	busqueda = request.GET.get('buscar')
-	periodos = Periodo.objects.raw('SELECT * FROM `backend_periodo` ORDER  BY id_periodo DESC')
+	periodos = Periodo.objects.raw('SELECT * FROM backend_periodo ORDER  BY id_periodo DESC')
 
 	if busqueda:
 		periodos = Periodo.objects.filter(
