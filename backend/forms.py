@@ -10,9 +10,9 @@ class CustomAuthenticationForm(AuthenticationForm):
         model = User
         fields = ('username', 'password')
         widgets = {
-            'username': forms.TextInput(attrs={'autofocus': True, 'class': 'input'}),
-            'password': forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'input'}),
-        }      
+            'username': forms.TextInput(attrs={"autofocus": True,"class": "input"}),
+            'password': forms.PasswordInput(attrs={"autocomplete": "current-password","class": "input"}),
+        }       
 
 class UserRegisterForm(UserCreationForm):
     class Meta:
