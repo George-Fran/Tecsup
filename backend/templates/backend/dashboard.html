@@ -116,6 +116,29 @@
         </div>
       </div>
     </div>
+
+    <div class="activity">
+      <div class="title">
+          <i class="uil uil-clock-three"></i>
+          <span class="text">Proyectos recientes</span>
+      </div>
+  
+      <div class="activity-data">
+          <div class="data names">
+              <span class="data-title"><strong>Titulo</strong></span>
+              {% for proyecto in proyectos %}
+              <span class="data-list">{{ proyecto.titulo }}</span>
+              {% endfor %}
+          </div>
+          <div class="data email">
+              <span class="data-title"><strong>Carrera</strong></span>
+              {% for proyecto in proyectos %}
+              <span class="data-list">{{ proyecto.carrera }}</span>
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+
   </div>
 </section>
 

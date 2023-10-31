@@ -47,10 +47,12 @@ def dashboard(request):
 
     noticias = Noticia.objects.order_by('-id_noticia')[:2]
     eventos = Evento.objects.order_by('-id_evento')[:2]
+	proyectos = Proyecto.objects.order_by('-id_proyecto')[:2]
 
     context = {
         'noticias': noticias,
         'eventos': eventos,
+		'proyectos': proyectos,
         'cantidad_noticias': cantidad_noticias,
         'cantidad_eventos': cantidad_eventos,
         'cantidad_proyectos': cantidad_proyectos
