@@ -37,6 +37,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic'
     'jazzmin',
     'backend.apps.BackendConfig',
     'django.contrib.admin',
