@@ -2,11 +2,12 @@ from django.urls import path
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
+from .views import CustomLoginView
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('login/', LoginView.as_view(template_name='backend/login.html'), name='login'),
+    path('login/', CustomLoginView.as_view(), name='login'),
     path('noticia/<int:id>/', views.noticia, name='noticia'),
     path('noticias/', views.noticias, name='noticias'),
     path('eventos/', views.eventos, name='eventos'),

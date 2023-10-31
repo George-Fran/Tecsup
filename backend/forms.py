@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Noticia, Evento, Proyecto, Carrera, Periodo
+from django.contrib.auth.forms import AuthenticationForm
 
 class UserRegisterForm(UserCreationForm):
     class Meta:
@@ -38,3 +39,10 @@ class PeriodoForm(forms.ModelForm):
     class Meta:
         model = Periodo
         fields = ['periodo']
+
+
+class CustomAuthenticationForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super(CustomAuthenticationForm, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update({'autofocus': True, 'class': 'input'})
+        self.fields['password'].widget.attrs.update({'autocomplete': 'current-password', 'class': 'input'})

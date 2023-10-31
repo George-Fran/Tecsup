@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Noticia, Evento, Proyecto, Carrera, Periodo
-from .forms import UserRegisterForm, NoticiaForm, EventoForm, ProyectoForm, CarreraForm, PeriodoForm
+from .forms import UserRegisterForm, NoticiaForm, EventoForm, ProyectoForm, CarreraForm, PeriodoForm, CustomAuthenticationForm
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView
 
 
 def home(request):
@@ -243,5 +244,9 @@ def eliminarperiodo(request, id):
 	periodo.delete()
 	return redirect('periodos')
 
+class CustomLoginView(LoginView):
+    form = CustomAuthenticationForm
+    template_name = 'backend/login.html'
+    # Resto de tu código de vista
 
 # Create your views here.
