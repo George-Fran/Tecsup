@@ -6,13 +6,9 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 class CustomAuthenticationForm(AuthenticationForm):
-    class Meta:
-        model = User
-        fields = ('username', 'password')
-        widgets = {
-            'username': forms.TextInput(attrs={"autofocus": True,"class": "input"}),
-            'password': forms.PasswordInput(attrs={"autocomplete": "current-password","class": "input"}),
-        }       
+    username = forms.CharField(widget=forms.TextInput(attrs={'autofocus': True, 'class': 'input'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'input'}))
+       
 
 class UserRegisterForm(UserCreationForm):
     class Meta:

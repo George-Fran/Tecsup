@@ -247,6 +247,6 @@ def eliminarperiodo(request, id):
 class CustomLoginView(LoginView):
     form = CustomAuthenticationForm
     template_name = 'backend/login.html'
-    # Resto de tu código de vista
+    #
 
 # Create your views here.
