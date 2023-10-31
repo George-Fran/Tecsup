@@ -41,10 +41,21 @@ def proyecto(request, id):
 
 @login_required
 def dashboard(request):
-	noticias = Noticia.objects.raw('SELECT * FROM backend_noticia ORDER  BY id_noticia DESC LIMIT 2;')
-	eventos = Evento.objects.raw('SELECT * FROM backend_evento ORDER  BY id_evento DESC LIMIT 2;')
-	context = {'noticias':noticias, 'eventos':eventos}
-	return render(request, 'backend/dashboard.html', context)
+    cantidad_noticias = Noticia.objects.count()
+    cantidad_eventos = Evento.objects.count()
+    cantidad_proyectos = Proyecto.objects.count()
+
+    noticias = Noticia.objects.order_by('-id_noticia')[:2]
+    eventos = Evento.objects.order_by('-id_evento')[:2]
+
+    context = {
+        'noticias': noticias,
+        'eventos': eventos,
+        'cantidad_noticias': cantidad_noticias,
+        'cantidad_eventos': cantidad_eventos,
+        'cantidad_proyectos': cantidad_proyectos
+    }
+    return render(request, 'backend/dashboard.html', context)
 
 @login_required
 def agregarnoticia(request):

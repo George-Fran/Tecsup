@@ -28,17 +28,17 @@
           <div class="box box1">
             <a href="{% url 'agregarnoticia' %}"><i class="uil uil-newspaper"></i></a>
             <span class="text">Noticias</span>
-            <span class="number">5</span>
+            <span class="number">{{ cantidad_noticias }}</span>
           </div>
           <div class="box box2">
             <a href="{% url 'agregarevento' %}"><i class="uil uil-stopwatch"></i></a>
             <span class="text">Eventos</span>
-            <span class="number">4</span>
+            <span class="number">{{ cantidad_eventos }}</span>
           </div>
           <div class="box box3">
             <a href="{% url 'agregarproyecto' %}"><i class="uil uil-folder-open"></i></a>
             <span class="text">Proyectos</span>
-            <span class="number">0</span>         
+            <span class="number">{{ cantidad_proyectos }}</span>   
           </div>
       </div>
     </div>
